@@ -109,6 +109,6 @@ they also implement the AutoCloseable interface which provide support for *try-w
 - Automates cleanup of 1 or more resources (resource is any type that implements AutoCloseable)
 - Optionally includes catch block(s) [Handle any errors that occur inside the try block but it will also
  handle the errors that are thrown at call to close method]
-
+  ![alt text](try-with-resourse-multi.PNG)
 
 
