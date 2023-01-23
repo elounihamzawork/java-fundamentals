@@ -111,4 +111,13 @@ they also implement the AutoCloseable interface which provide support for *try-w
  handle the errors that are thrown at call to close method]
   ![alt text](try-with-resourse-multi.PNG)
 
+### Chaining streams
+- Streams are often chaining together.
+- One stream instance leverages another(we do this to create high level functionality)
+- Simplifies reusability
+- **Chain using constructor**
+
+A good example of chaining is `InputStreamReader` : provides reader behavior over an InputStream, it allows us to have data
+that comes in a binary format and allows as to process it as character data
+
 
