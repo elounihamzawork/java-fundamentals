@@ -51,5 +51,24 @@ Lambdas represent source code - not data and not object state!
 (int x, int y) -> { return x + y; } 
 (long x) -> { return x * 2; } 
 () -> { String msg = "Lambda"; System.out.println(msg); }
+for single return statements keyword return together with {}-pair can be dropped:  (int x, int y) -> { return x * y; } =>  (x, y) -> x * y 
+( )-pair can be dropped with only one parameter: (long x) -> { return x * 2; }  => x -> x * 2 
 ````
+
+# Type inference
+
+Lambda expressions allow for minimal syntax if compiler can deduct type information (so called type inference)
+
+# Method references (“function pointers”)
+
+**Syntax:** ``Classname::methodName``  ``objectReferenceName::methodName``
+Lambdas can be replaced by method references whenever there would not further actions within the the lambda
+
+|   Reference   | Method reference |   replacing Lambda   |
+|:-------------:|    :----:   |:--------------------:|
+| static method | String::valueOf       |    obj -> String.valueOf(obj)     |
+|   instance method (via class)    | String::compareTo         |       (s1, s2) -> s1.comapreTo(s2)       |
+| instance method (via object ref)  | person::getName        |   () -> person.getName()     |
+| Constructor  | ArrayList::new        |    () -> new ArrayList<>()     |
+
 
