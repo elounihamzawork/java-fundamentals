@@ -19,7 +19,10 @@ A stream is “a **sequence of elements** from a **source** that supports **aggr
 - **Intermediate operations are lazily loaded.** (When you call intermediate operations, they are actually not executed. 
   They are just stored in the memory and executed when the terminal operation is called on the stream.)
 - **For functional programming you should not modify state**
-- 
+- Streams only for object ref types, int, long, and double (Minor primitive types are missing like char and byte)
+- **Streams are processed lazily**
+- Data is “pulled” by terminal operation, not pushed by source
+- Intermediate results typically not stored (But there are exceptions (e.g., sorted))
 
 ### Streams : 
 
@@ -61,6 +64,9 @@ The Streaming API provides so called “finalizing” methods (i.e. methods that
 ``forEach, toArray, collect, reduce, min, max, count, anyMatch, noneMatch, findFirst, findAny...``
 
 # Lambdas
+
+Term comes from λ-Calculus | Everything is a function | anonymous function (A function without a corresponding identifier (name))
+
 
 Lambda expressions are lexically scoped. This means that they **do not inherit any names from a supertype or introduce a new level of scoping**. 
 Declarations in a lambda expression are interpreted just as they are in the enclosing environment.
