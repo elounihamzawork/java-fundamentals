@@ -11,6 +11,7 @@ It uses `trySplit()` method `to divide itself into Sub-Spliterators` to support 
 
 - **default void forEachRemaining(Consumer action):** Performs the given action for each remaining element, 
   sequentially in the current thread, until all elements have been processed or the action throws an exception.
+- **trySplit():** To split the source, so that two threads can work separately on different sections of the input, Spliterator provides a trySplit() method
 
 
 ##### Spliterator trySplit() example
