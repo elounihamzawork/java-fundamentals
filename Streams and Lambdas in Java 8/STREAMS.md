@@ -34,6 +34,7 @@ Java Streams are basically a pipeline of `aggregate operations` that can be appl
 and that behaviour is what gets applied to our sequence.
 
 **higher-order function:** is a function that does at least one of the following(returns a function as its result, takes one or more functions as arguments)
+
 ### Characteristics of a stream : 
 
 * **Declarative paradigm:** Streams are written specifying what has to be done, but not how.)
@@ -46,6 +47,17 @@ and that behaviour is what gets applied to our sequence.
 * Do not contain storage for data 
 * wrap collections (lists, set, maps)
 * work on copies
+* Java Streams use **ForkJoinPool** to launch parallel executions.
+
+
+### Stream pipelines
+A stream pipeline is composed of a **stream source**, **zero or more intermediate operations**, and a **terminal operation**.
+### Stream sources
+A stream source is described by an abstraction called **_Spliterator_**. <br>
+As its name suggests, Spliterator combines two behaviors: accessing the elements of the source (iterating), and possibly decomposing the input source for parallel execution (splitting).<br>
+
+
+
 
 
 ### How do data get into streams?
