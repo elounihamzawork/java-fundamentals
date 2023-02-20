@@ -34,3 +34,13 @@ The anonymous class expression consists of the following:
 - Parentheses that contain the arguments to a constructor, just like a normal class instance creation expression. 
   Note: When you implement an interface, there is no constructor, so you use an empty pair of parentheses, as in this example. 
 - A body, which is a class declaration body. More specifically, in the body, method declarations are allowed but statements are not.
+
+
+## Working with Files in Java 11 Using the Java NIO API
+- A Path is not a File!
+- Path is interface from java 7, where File is a class from java 1 that models files
+- Path is attached to a file system, it is created from a file system 
+- Path is used to access a file or a directory on a given file system
+- A File is independent from the file system, a file does not know anything about the FS it describes the file on.
+- The file is created on a string
+
